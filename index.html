@@ -6,6 +6,27 @@
     <title>Inventario</title>
 </head>
 <body>
-      
+      <h1>Gestion de Inventario</h1>
+
+      <form id="inventario-tabla" class="inventario-tabla-estilos">
+        <label for="nombre-producto">Nombre:</label>
+        <input type="text" id="nombre-producto" required>
+        <label for="cantidad-producto">Cantidad:</label>
+        <input type="text" id="cantidad-producto" required>
+        <label for="precio-producto">Precio:</label>
+        <input type="number" step="0.01" id="precio-producto" required>
+        <button type="submit">Agregar Producto</button>
+      </form>
+
+      <table id="inventario-tabla" class="inventario-tabla-estilos">
+               <tr>
+                <th>Nombre:</th>
+                <th>Cantidad:</th>
+                <th>Precio:</th>
+                <th>Acciones:</th>
+               </tr>
+      </table>
+          
+      <script src="/scripts/main.js"></script>
 </body>
 </html>
