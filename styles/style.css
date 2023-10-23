@@ -11,8 +11,9 @@ h1{
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: beige;
-    background: radial-gradient(circle, rgb(117, 178, 197), rgb(2, 75, 111));
+    background-color: rgb(234, 145, 56);
+    background: radial-gradient(circle, rgba(0, 16, 96, q) 0%, rgb(0, 0, 0)100%);
+    color: red;
 }
 
 .inventario-tabla-estilos {
@@ -24,28 +25,59 @@ body{
 
 .inventario-tabla-estilos th,
 .inventario-tabla-estilos td {
-    border: 1px solid white;
-    padding: 8px;
+    border: 1px solid #cccccc;
+    padding: 1px solid #cccccc;
+    margin: 8px;
     text-align: center;
 }
 
 .inventario-tabla-estilos tr:hover{
-    background-color: rgb(22, 7, 102);
+    background-color: black;
     color: white;
 
 }
 
 .productos-tabla-estilos {
+    background-color: rgb(254, 163, 106);
     color: white;
     padding: 20px;
-    border: 1px solid gray;
-    text-align: center;
+    border: 1px solid #333;
     border-radius: 5px;
     margin: 20px;
-    box-shadow: 0 4px 4px white;
-    background: radial-gradient(circle, rgb(117, 178, 197), rgb(2, 75, 111));
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* Estilos para las etiquetas y campos de entrada*/
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+input{
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    color: white;
+    /* Texto en color blanco para mayor contraste*/
+    background-color: black;
+    /*Fondo negro para los campos de entrada*/
+    outline: none;
 }
 
 button{
-    margin-left: 10px;
+    margin: 2% 2% 2% 2%;
+    /* Color de fondo azul*/
+    background-color: #3523b8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0056b3;
 }

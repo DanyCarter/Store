@@ -34,5 +34,7 @@ export const insertProduct = () => {
 
     }
 
+
     })
+    
 }

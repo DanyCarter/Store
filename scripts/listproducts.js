@@ -34,6 +34,9 @@ export const listproducts = () => {
         })
 
         cell4.appendChild(editButton)
+        deleteButton.addEventListener("click",() =>{
+            row.remove();
+        })
         
     });
 }
