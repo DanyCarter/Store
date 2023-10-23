@@ -36,7 +36,6 @@ body{
 }
 
 .productos-tabla-estilos {
-    background-color: black;
     color: white;
     padding: 20px;
     border: 1px solid gray;
@@ -44,5 +43,9 @@ body{
     border-radius: 5px;
     margin: 20px;
     box-shadow: 0 4px 4px white;
+    background: radial-gradient(circle, rgb(117, 178, 197), rgb(2, 75, 111));
 }
 
+button{
+    margin-left: 10px;
+}
