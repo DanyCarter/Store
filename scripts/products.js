@@ -1,11 +1,11 @@
 export { inventario };
 
 const getRandomQuantity = () => {
-    return (Math.random() * 30) + 1;
+    return ((Math.random() * 30) + 1).toFixed(0);
 }
 
 
-const inventory = [
+const inventario = [
     { id: 1, nombre: "Bruja", cantidad: getRandomQuantity(), precio: 79.95 },
     { id: 2, nombre: "Spider-Man", cantidad: getRandomQuantity(), precio: 69.99 },
     { id: 3, nombre: "Dinosaurio", cantidad: getRandomQuantity(), precio: 59.81 },

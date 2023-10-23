@@ -6,7 +6,7 @@ export const listproducts = () => {
 
     inventario.forEach(item => {
 
-        const row = table.insertCell()
+        const row = table.insertRow()
 
         const cell1 = row.insertCell(0)
         const cell2 = row.insertCell(1)

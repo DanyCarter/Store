@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Metal Mania';
+  src: url('/assets/Metal_Mania/MetalMania-Regular.ttf');
+}
+
+h1{
+    font-family: 'Metal Mania';
+    text-align: center;
+    color: white;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+    background: radial-gradient(circle, rgb(117, 178, 197), rgb(2, 75, 111));
+}
+
+.inventario-tabla-estilos {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    color: white;
+}
+
+.inventario-tabla-estilos th,
+.inventario-tabla-estilos td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: center;
+}
+
+.inventario-tabla-estilos tr:hover{
+    background-color: rgb(22, 7, 102);
+    color: white;
+
+}
+
+.productos-tabla-estilos {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 4px 4px white;
+}
+
