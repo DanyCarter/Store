@@ -1,83 +1,83 @@
+/* Descargamos fuentes */
 @font-face {
-  font-family: 'Metal Mania';
-  src: url('/assets/Metal_Mania/MetalMania-Regular.ttf');
+    font-family: 'Playfair';
+    src: url('/assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
-h1{
-    font-family: 'Metal Mania';
-    text-align: center;
-    color: white;
-}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(234, 145, 56);
-    background: radial-gradient(circle, rgba(0, 16, 96, q) 0%, rgb(0, 0, 0)100%);
+body {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size: cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    font-family: 'Arial, Helvetica, sans-serif'; /* Añade la fuente para el cuerpo de la página */
     color: red;
 }
 
-.inventario-tabla-estilos {
-    border-collapse: collapse;
-    width: 80%;
-    margin: 20px auto;
-    color: white;
+h1 {
+    font-family: 'Playfair', 'Roboto', sans-serif; /* Utiliza la fuente Playfair para h1 */
+    font-size: 70px;
+    font-weight: 600;
+    color: #b393d3;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #957dad,
+                 1px 2px 0px #957dad,
+                 1px 3px 0px #957dad,
+                 1px 4px 0px #957dad,
+                 1px 5px 0px #957dad,
+                 1px 6px 0px #957dad,
+                 1px 10px 5px rgba(16, 16, 16, 0.5),
+                 1px 15px 10px rgba(16, 16, 16, 0.4),
+                 1px 20px 30px rgba(16, 16, 16, 0.3),
+                 1px 25px 50px rgba(16, 16, 16, 0.2);
 }
 
-.inventario-tabla-estilos th,
-.inventario-tabla-estilos td {
-    border: 1px solid #cccccc;
-    padding: 1px solid #cccccc;
-    margin: 8px;
+@-webkit-keyframes slidein {
+    from { background-position: top; background-size: 3000px; }
+    to { background-position: -100px 0px; background-size: 2750px; }
+}
+
+@keyframes slidein {
+    from { background-position: top; background-size: 3000px; }
+    to { background-position: -100px 0px; background-size: 2750px; }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(75, 75, 250, 0.3);
+    border-radius: 3px;
     text-align: center;
 }
 
-.inventario-tabla-estilos tr:hover{
-    background-color: black;
+.center h1 {
+    text-align: center;
     color: white;
-
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
 }
 
-.productos-tabla-estilos {
-    background-color: rgb(254, 163, 106);
-    color: white;
-    padding: 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+#buscar-producto{
+    width: 300px;
+    text-align: center;
+    border: #957dad;
+    height: 28px;
 }
 
-/* Estilos para las etiquetas y campos de entrada*/
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-
-}
-
-input{
-    width: 97%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    color: white;
-    /* Texto en color blanco para mayor contraste*/
-    background-color: black;
-    /*Fondo negro para los campos de entrada*/
-    outline: none;
-}
-
-button{
-    margin: 2% 2% 2% 2%;
-    /* Color de fondo azul*/
-    background-color: #3523b8;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: #0056b3;
+#btn-buscar{
+    
 }
