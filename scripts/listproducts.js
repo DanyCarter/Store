@@ -22,7 +22,11 @@ export const listproducts = (products) => {
         deleteButton.addEventListener("click", () => {
             const confirmed = window.confirm("¿Quieres borrar este producto?");
             if (confirmed) {
-                row.remove();
+                const index = productsToDisplay.findIndex(product => product.id === item.id);
+                if (index !== -1) {
+                    productsToDisplay.splice(index, 1);
+                    row.remove();
+                }
             }
         });
         cell4.appendChild(deleteButton);
@@ -30,13 +34,23 @@ export const listproducts = (products) => {
         const editButton = document.createElement("button");
         editButton.innerText = "EDITAR";
         editButton.addEventListener("click", () => {
+            editButton.style.display = "none"; // Ocultar el botón EDITAR
             const cantidadInput = document.createElement("input");
+            cantidadInput.className = "tableInput";
             cantidadInput.value = item.cantidad;
 
+            const nombreInput = document.createElement("input");
+            nombreInput.className = "tableInput";
+            nombreInput.value = item.nombre;
+
             const precioInput = document.createElement("input");
+            precioInput.className = "tableInput";
             precioInput.value = item.precio;
 
             // Replace the cell content with input fields
+            cell1.innerHTML = "";
+            cell1.appendChild(nombreInput);
+
             cell2.innerHTML = "";
             cell2.appendChild(cantidadInput);
 
@@ -50,12 +64,17 @@ export const listproducts = (products) => {
 
             confirmButton.addEventListener("click", () => {
                 // Update the quantity and price values with the new values from the input fields
+                item.nombre = nombreInput.value
                 item.cantidad = cantidadInput.value;
                 item.precio = precioInput.value;
 
                 // Update the cell content
+                cell1.innerHTML = item.nombre;
                 cell2.innerHTML = item.cantidad;
                 cell3.innerHTML = item.precio;
+
+                // Mostrar nuevamente el botón EDITAR
+                editButton.style.display = "inline";
 
                 // Remove the confirm button
                 cell4.removeChild(confirmButton);

@@ -7,35 +7,48 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <h1>Gestión de Inventario</h1>
-
-    <input type="text" id="buscar-producto" placeholder="Buscar por nombre">
-    <button id="btn-buscar">Buscar</button>
+    <header>
+        <h1>GESTIÓN DE INVENTARIO</h1>
+        <div class="search-container">
+            <input type="text" id="buscar-producto" placeholder="Buscar por nombre...">
+            <button id="btn-buscar">Buscar</button>
+        </div>
+    </header>
 
     <br>
     <br>
 
-    <form id="productos-tabla" class="productos-tabla-estilos">
-        <label for="nombre-producto">Nombre:</label>
-        <input type="text" id="nombre-producto" required>
-        <label for "cantidad-producto">Cantidad:</label>
-        <input type="text" id="cantidad-producto" required>
-        <label for="precio-producto">Precio:</label>
-        <input type="number" step="0.01" id="precio-producto" required>
-        <button type="submit">Agregar Producto</button>
-    </form>
+    <div id="container">
+        <div id="table">
+            <form id="productos-tabla" class="productos-tabla-estilos">
+                <label for="nombre-producto">Nombre:</label>
+                <input type="text" id="nombre-producto" required>
+                <label for="cantidad-producto">Cantidad:</label>
+                <input type="text" id="cantidad-producto" required>
+                <label for="precio-producto">Precio:</label>
+                <input type="number" step="0.01" id="precio-producto" required>
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </div>
+        <div class="card bg-blur">
+            <table id="inventario-tabla" class="inventario-tabla-estilos">
+                <tr>
+                    <th>Nombre:</th>
+                    <th>Cantidad:</th>
+                    <th>Precio:</th>
+                    <th>Acciones:</th>
+                </tr>
+                <tbody id="clear-table"></tbody>
+            </table>
+        </div>
+    </div>
 
-    <div class="card bg-blur">
-    <table id="inventario-tabla" class="inventario-tabla-estilos">
-        <tr>
-            <th>Nombre:</th>
-            <th>Cantidad:</th>
-            <th>Precio:</th>
-            <th>Acciones:</th>
-        </tr>
-        <tbody id="clear-table"></tbody>
-    </table>
-</div>
+    <footer>
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </footer>
     <script type="module" src="/scripts/main.js"></script>
 </body>
 </html>

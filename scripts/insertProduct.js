@@ -7,7 +7,7 @@ export const insertProduct = () => {
     //Le quitamos las propiedades al form
         event.preventDefault()
          
-    // Capturar los valores introducidos por el usuario
+    // Cogemos los valores introducidos por el usuario
     const nombreProducto = document.getElementById("nombre-producto").value
     const cantidadProducto = parseInt(document.getElementById("cantidad-producto").value)
     const precioProducto = parseFloat(document.getElementById("precio-producto").value)
